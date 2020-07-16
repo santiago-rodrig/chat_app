@@ -28,11 +28,15 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 # semantic ui
 gem 'semantic-ui-sass'
 # jquery
 gem 'jquery-rails'
+# fake data
+gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+# tabular data at the console
+gem 'hirb'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
