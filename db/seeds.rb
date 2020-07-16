@@ -29,3 +29,9 @@ User.create([
   }
 ])
 
+strings = ['Hello!', 'Hi!', 'Greetings!']
+
+User.all.each.with_index do |user, i|
+  user.messages.create(body: strings[i])
+end
+

@@ -1,0 +1,15 @@
+<div class="comment">
+  <a class="avatar">
+    <%= gravatar_for(message.user) %>
+  </a>
+  <div class="content">
+    <a class="author"><%= message.user.name %></a>
+    <div class="metadata">
+      <span class="date"><%= time_ago_in_words(message.created_at) %> ago</span>
+    </div>
+    <div class="text">
+      <%= message.body %>
+    </div>
+  </div>
+</div>
+
