@@ -21,3 +21,8 @@
 /yarn-error.log
 
 .byebug_history
+
+# vim backup files
+*.swo
+*.swp
+
