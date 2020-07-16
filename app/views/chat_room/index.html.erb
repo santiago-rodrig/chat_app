@@ -1,3 +1,18 @@
-<h1>ChatRoom#index</h1>
-<p>Find me in app/views/chat_room/index.html.erb</p>
+<h1 class="ui center aligned icon header">
+  <i class="circular orange coffee icon"></i>
+  Say something!
+</h1>
+
+<div class="ui two column grid">
+  <div class="twelve wide column">
+    <div class="ui segment">
+      <%= render 'chat' %>
+    </div>
+  </div>
+  <div class="four wide column">
+    <div class="ui raised segment">
+      <%= render 'chat_users' %>
+    </div>
+  </div>
+</div>
 
