@@ -26,3 +26,6 @@
 *.swo
 *.swp
 
+# env vars
+*.env
+
