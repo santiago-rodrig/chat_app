@@ -6,6 +6,6 @@ test:
 
 production:
   adapter: redis
-  url: redis://redistogo:ENV['REDIS_TOKEN']@tarpon.redistogo.com:11879/
+  url: redis://redistogo:<%= ENV['REDIS_TOKEN'] %>@tarpon.redistogo.com:11879/
   channel_prefix: chat_app_production
 
