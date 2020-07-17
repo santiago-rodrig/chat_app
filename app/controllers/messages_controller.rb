@@ -5,7 +5,10 @@ class MessagesController < ApplicationController
     @message = current_user.messages.build(message_params)
     if @message.save
       ActionCable.server.broadcast 'chat_room_channel',
-        foo: @message.body
+        message: render_to_string(@message)
+      head :ok
+    else
+      head :server_error
     end
   end
 

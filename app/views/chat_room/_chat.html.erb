@@ -1,7 +1,9 @@
 <div class="ui comments">
   <h3 class="ui dividing header">Messages</h3>
-  <%= render @messages %>
-  <%= form_for(@message, html: { class: 'ui reply form' }) do |f| %>
+  <div id="messages">
+    <%= render @messages %>
+  </div>
+  <%= form_for(@message, html: { class: 'ui reply form' }, remote: true) do |f| %>
     <div class="field">
       <%= f.text_area :body %>
     </div>
