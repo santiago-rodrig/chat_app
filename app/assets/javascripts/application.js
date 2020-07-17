@@ -16,11 +16,18 @@
 //= require semantic-ui
 //= require_tree .
 
+function scroll_to_bottom() {
+  if ($('#messages').length > 0) {
+    $('#messages').scrollTop($('#messages')[0].scrollHeight);
+  }
+}
+
 $(document).on('turbolinks:load', function() {
   $('.ui.dropdown').dropdown();
   $('.message .close').on('click', function() {
     $(this).closest('.message').transition('fade');
   });
   $('.field_with_errors').closest('.field').addClass('error');
+  scroll_to_bottom();
 });
 

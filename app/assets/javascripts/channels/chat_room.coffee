@@ -9,4 +9,5 @@ App.chat_room = App.cable.subscriptions.create "ChatRoomChannel",
     # Called when there's incoming data on the websocket for this channel
     $('#messages').append(data.message)
     $('#message_body').val('')
+    scroll_to_bottom()
 
