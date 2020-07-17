@@ -1,0 +1,19 @@
+<div class="ui grid">
+  <div class="one column centered row">
+    <div class="column">
+      <h1 class="ui center aligned icon header">
+        <i class="edit circular orange icon"></i>
+        Change your info
+      </h1>
+    </div>
+  </div>
+  <%= render 'shared/errors', obj: @user %>
+  <div class="one column centered row">
+    <div class="eight wide column">
+      <div class="ui raised segment">
+        <%= render 'form' %>
+      </div>
+    </div>
+  </div>
+</div>
+

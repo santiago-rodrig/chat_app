@@ -45,7 +45,7 @@ module SessionsHelper
 
   def render_account_dropdown
     profile_link = link_to 'Profile', current_user, class: 'item'
-    edit_link = link_to 'Edit', '#', class: 'item'
+    edit_link = link_to 'Edit', edit_user_path(current_user), class: 'item'
     %(
       <div class="ui dropdown item">
         Account <i class="dropdown icon"></i>
