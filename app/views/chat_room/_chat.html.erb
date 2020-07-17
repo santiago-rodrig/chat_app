@@ -1,13 +1,14 @@
 <div class="ui comments">
   <h3 class="ui dividing header">Messages</h3>
   <%= render @messages %>
-  <form class="ui reply form">
+  <%= form_for(@message, html: { class: 'ui reply form' }) do |f| %>
     <div class="field">
-      <textarea></textarea>
+      <%= f.text_area :body %>
     </div>
-    <div class="ui blue labeled submit icon button">
+    <%= f.button(class: 'ui blue labeled submit icon button') do %>
       <i class="icon edit"></i>
       Send Message
-    </div>
-  </form>
+    <% end %>
+  <% end %>
 </div>
+
