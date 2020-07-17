@@ -1,25 +1,7 @@
 <div class="ui large menu">
   <div class="ui container">
-    <%= link_to 'Chat room', root_path, class: 'item' %>
-    <a class="item">
-      Messages
-    </a>
-    <div class="right menu">
-      <div class="ui dropdown item">
-        Account <i class="dropdown icon"></i>
-        <div class="menu">
-          <a class="item">Logout</a>
-          <a class="item">Login</a>
-          <a class="item">Signup</a>
-        </div>
-      </div>
-      <div class="item">
-        <%= link_to 'Login', login_path, class: 'ui button' %>
-      </div>
-      <div class="item">
-        <div class="ui button">Sign up</div>
-      </div>
-    </div>
+    <%= render_chatroom_link %>
+    <%= render_session_links %>
   </div>
 </div>
 

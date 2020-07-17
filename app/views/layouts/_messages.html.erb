@@ -1,0 +1,14 @@
+<% if flash.any? %>
+  <% flash.each do |kind, message| %>
+    <div class="ui <%= kind.to_s %> message">
+      <i class="close icon"></i>
+      <div class="header">
+        <%= kind.to_s.capitalize %>
+      </div>
+      <p>
+      <%= message %>
+      </p>
+    </div>
+  <% end %>
+<% end %>
+
