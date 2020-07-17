@@ -1,7 +1,7 @@
 <div class="item">
-  <%= gravatar_for user, true %>
+  <%= gravatar_for user, class: 'ui avatar image' %>
   <div class="content">
-    <%= link_to user.name, '#', class: 'header' %>
+    <%= link_to user.name, user, class: 'header' %>
   </div>
 </div>
 

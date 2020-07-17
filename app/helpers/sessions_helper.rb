@@ -44,7 +44,7 @@ module SessionsHelper
   private
 
   def render_account_dropdown
-    profile_link = link_to 'Profile', '#', class: 'item'
+    profile_link = link_to 'Profile', current_user, class: 'item'
     edit_link = link_to 'Edit', '#', class: 'item'
     %(
       <div class="ui dropdown item">
