@@ -1,9 +1,17 @@
 module SessionsHelper
   def render_chatroom_link
     if current_user
-      return %(
-        #{link_to 'Chat room', root_path, class: 'item'}
-      ).html_safe
+      c_action = controller.action_name
+      c_name = controller.controller_name
+      if [c_name, c_action] == ['chat_room', 'index']
+        return %(
+          #{link_to 'Chat room', root_path, class: 'active item'}
+        ).html_safe
+      else
+        return %(
+          #{link_to 'Chat room', root_path, class: 'item'}
+        ).html_safe
+      end
     end
 
     nil
