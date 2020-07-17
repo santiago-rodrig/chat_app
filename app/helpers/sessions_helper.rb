@@ -3,7 +3,7 @@ module SessionsHelper
     if current_user
       return %(
         #{link_to 'Chat room', root_path, class: 'item'}
-      )
+      ).html_safe
     end
 
     nil
@@ -11,10 +11,10 @@ module SessionsHelper
 
   def render_session_links
     login_link = link_to 'Login', login_path, class: 'ui button'
-    signup_link = link_to 'Sign up', '#', class: 'ui button'
+    signup_link = link_to 'Sign up', signup_path, class: 'ui button'
     logout_link = link_to(
       'Logout',
-      '#',
+      login_path,
       method: :delete,
       class: 'ui primary button'
     )
@@ -33,8 +33,8 @@ module SessionsHelper
 
     %(
       <div class="right menu">
+        #{render_account_dropdown}
         <div class="item">
-          #{render_account_dropdown}
           #{logout_link}
         </div>
       </div>
@@ -44,7 +44,7 @@ module SessionsHelper
   private
 
   def render_account_dropdown
-    profile_link = link_to 'Profile', '#', clas: 'item'
+    profile_link = link_to 'Profile', '#', class: 'item'
     edit_link = link_to 'Edit', '#', class: 'item'
     %(
       <div class="ui dropdown item">

@@ -21,5 +21,6 @@ $(document).on('turbolinks:load', function() {
   $('.message .close').on('click', function() {
     $(this).closest('.message').transition('fade');
   });
+  $('.field_with_errors').closest('.field').addClass('error');
 });
 

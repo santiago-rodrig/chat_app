@@ -14,6 +14,8 @@ class ApplicationController < ActionController::Base
         end
       end
     end
+
+    @current_user
   end
 
   def require_login

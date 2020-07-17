@@ -1,0 +1,19 @@
+<% if obj.errors.any? %>
+  <div class="one column centered row">
+    <div class="seven wide column">
+      <% obj.errors.full_messages.each do |message| %>
+        <div class="ui error message">
+          <i class="close icon"></i>
+          <div class="header">
+            The following errors prevented the <%= obj.class.name %>
+          from being saved
+          </div>
+          <p>
+          <%= message %>
+          </p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+<% end %>
+

@@ -1,0 +1,24 @@
+<%= form_for(@user, html: { class: 'ui form' }) do |f| %>
+  <div class="field">
+    <%= f.label :name, 'User name' %>
+    <%= f.text_field :name, placeholder: 'Chatman33', required: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.email_field :email, placeholder: 'chat.man@example.net', required: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <%= f.password_field :password, required: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation, required: true %>
+  </div>
+
+  <%= f.submit class: 'ui primary button' %>
+<% end %>
+
