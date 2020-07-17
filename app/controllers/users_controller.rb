@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :require_login, except: [:new, :create]
+  before_action :require_same_user, only: [:destroy, :edit, :update]
 
   PREFIX = 'User was successfully '
 
@@ -42,6 +43,13 @@ class UsersController < ApplicationController
     params.require(:user).permit(
       :name, :email, :password, :password_confirmation
     )
+  end
+
+  def require_same_user
+    unless @user == current_user
+      flash[:warning] = 'You cannot change other users info.'
+      redirect_to root_path
+    end
   end
 end
 
