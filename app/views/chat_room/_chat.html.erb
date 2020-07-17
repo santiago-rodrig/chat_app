@@ -5,7 +5,7 @@
   </div>
   <%= form_for(@message, html: { class: 'ui reply form' }, remote: true) do |f| %>
     <div class="field">
-      <%= f.text_area :body %>
+      <%= f.text_field :body %>
     </div>
     <%= f.button(class: 'ui blue labeled submit icon button') do %>
       <i class="icon edit"></i>
