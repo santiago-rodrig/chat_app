@@ -1,4 +1,5 @@
 <!-- place the license badge here and the build passing badge too -->
+![release badge](https://img.shields.io/github/v/release/santiago-rodrig/chat_app)
 ![website state badge](https://img.shields.io/website?down_color=lightgrey&down_message=offline&up_color=green&up_message=online&url=https%3A%2F%2Fsrodrig-chat-app.herokuapp.com)
 ![license badge](https://img.shields.io/github/license/santiago-rodrig/chat_app)
 ![followers](https://img.shields.io/github/followers/santiago-rodrig?style=social)
