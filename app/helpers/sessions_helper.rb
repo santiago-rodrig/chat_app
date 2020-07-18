@@ -28,23 +28,19 @@ module SessionsHelper
     )
     unless current_user
       return %(
-        <div class="right menu">
-          <div class="item">
-            #{login_link}
-          </div>
-          <div class="item">
-            #{signup_link}
-          </div>
+        <div class="item">
+          #{login_link}
+        </div>
+        <div class="item">
+          #{signup_link}
         </div>
       ).html_safe
     end
 
     %(
-      <div class="right menu">
-        #{render_account_dropdown}
-        <div class="item">
-          #{logout_link}
-        </div>
+      #{render_account_dropdown}
+      <div class="item">
+        #{logout_link}
       </div>
     ).html_safe
   end
