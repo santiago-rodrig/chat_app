@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+  before_action :redirect_if_already_logged, except: :destroy
+
   def login
   end
 
@@ -24,6 +26,12 @@ class SessionsController < ApplicationController
 
   def login_params
     params.require(:credentials).permit(:name, :password)
+  end
+
+  def redirect_if_already_logged
+    if current_user
+      redirect_to root_path
+    end
   end
 end
 
