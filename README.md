@@ -70,7 +70,8 @@ Next, you'll want to visit [localhost at port 3000](http://localhost:3000).
 ## Collaboration
 
 To collaborate to this project first fork the repository, after that, create a new branch based
-on [develop](REPOSITORY_DEVELOP_BRANCH_URL) (using [Git-flow](https://nvie.com/posts/a-successful-git-branching-model/)
+on [develop](https://github.com/santiago-rodrig/chat_app/tree/develop)
+(using [Git-flow](https://nvie.com/posts/a-successful-git-branching-model/)
 is recommended), push your branch to your forked repository and create a PR
 (Pull Request) from your branch to the develop branch of the original repository.
 
