@@ -29,3 +29,6 @@
 # env vars
 *.env
 
+# Misc
+*.DS_Store
+
